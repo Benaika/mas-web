@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #183553;
+    padding: 15px 20px;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Full-Width Image Slider */
+.slider-container {
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    animation: slideAnimation 40s infinite;
+}
+
+.slider img {
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+    .join-btn {
+        background-color: #4690df;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
+        width: 180px; /* Adjust width */
+        height: 50px; /* Adjust height */
+        font-size: 18px; /* Adjust text size */
+    }
+    .footer-content h1 {
+        font-size: 40px; /* Adjust text size */
+        font-weight: bold; /* Make text bold */
+        text-transform: uppercase; /* Make text uppercase */
+        text-align: left; /* Center align the text */
+    }
+
+.join-btn:hover {
+    background-color: #ffcc00;
+    color: #183553;
+}
+
+/* Floating Inquiry Button */
+.floating-inquiry {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #183553;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.floating-inquiry:hover {
+    transform: scale(1.1);
+    background-color: #ffcc00;
+}
+
+.floating-inquiry img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Footer */
+.footer {
+    background-color: #183553;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+.footer-logo img {
+    width: 120px; /* Adjust the width (e.g., 120px, 150px) */
+    height: auto; /* Keeps aspect ratio, or set a specific height */
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Centers the logo */
+
+}
+
+.footer-content-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section-main h3 {
+    margin-top: 10px;
+}
+
+.footer-section-main p {
+    margin-top: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: left;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2c3e50;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
